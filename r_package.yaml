@@ -1,0 +1,39 @@
+#R can be configured using the package.yaml to hold the environment variables needed rather than using the r_enviornment_script.R
+#this may make more sense later. 
+#tested: 8/8/24 and was not able to get this to work as expected.
+#this is an AI generated package file. It may contain errors. It has not been tested, but it looks right. 
+#source : https://www.perplexity.ai/search/i-recently-had-to-use-cflags-r-u0wIs6BJR8W7HJO1mxWEWA
+packages:
+  sqlite:
+    paths:
+      sqlite@3.43.2: /modeling/spack/opt/spack/linux-rocky8-haswell/gcc-8.5.0/sqlite-3.43.2-pfuqkkv2x4tjoiuq6c43nsxrtaqxidrh
+    build_env:
+      set:
+        SQLITE_ROOT: /modeling/spack/opt/spack/linux-rocky8-haswell/gcc-8.5.0/sqlite-3.43.2-pfuqkkv2x4tjoiuq6c43nsxrtaqxidrh
+        PKG_CONFIG_PATH: /modeling/spack/opt/spack/linux-rocky8-haswell/gcc-8.5.0/sqlite-3.43.2-pfuqkkv2x4tjoiuq6c43nsxrtaqxidrh/lib/pkgconfig
+        LIBS: "-L/modeling/spack/opt/spack/linux-rocky8-haswell/gcc-8.5.0/sqlite-3.43.2-pfuqkkv2x4tjoiuq6c43nsxrtaqxidrh/lib -lsqlite3"
+  proj:
+    paths:
+      proj@6.3.2: /modeling/spack/opt/spack/linux-rocky8-haswell/gcc-8.5.0/proj-6.3.2-rh7bjpql5dq4sr2z7gqlx3hhnnxtnsw3
+    build_env:
+      set:
+        PROJ_ROOT: /modeling/spack/opt/spack/linux-rocky8-haswell/gcc-8.5.0/proj-6.3.2-rh7bjpql5dq4sr2z7gqlx3hhnnxtnsw3
+        PROJ_BIN: /modeling/spack/opt/spack/linux-rocky8-haswell/gcc-8.5.0/proj-6.3.2-rh7bjpql5dq4sr2z7gqlx3hhnnxtnsw3/bin
+        PROJ_INCLUDE: /modeling/spack/opt/spack/linux-rocky8-haswell/gcc-8.5.0/proj-6.3.2-rh7bjpql5dq4sr2z7gqlx3hhnnxtnsw3/include
+        CFLAGS: "-I/modeling/spack/opt/spack/linux-rocky8-haswell/gcc-8.5.0/proj-6.3.2-rh7bjpql5dq4sr2z7gqlx3hhnnxtnsw3/include"
+        LDFLAGS: "-L/modeling/spack/opt/spack/linux-rocky8-haswell/gcc-8.5.0/proj-6.3.2-rh7bjpql5dq4sr2z7gqlx3hhnnxtnsw3/lib64"
+  gdal:
+    paths:
+      gdal@3.8.5: /modeling/spack/opt/spack/linux-rocky8-haswell/gcc-8.5.0/gdal-3.8.5-ovb27rzosy4gicjgna36sf64rryc5mhn
+    build_env:
+      set:
+        GDAL_CONFIG: /modeling/spack/opt/spack/linux-rocky8-haswell/gcc-8.5.0/gdal-3.8.5-ovb27rzosy4gicjgna36sf64rryc5mhn/bin/gdal-config
+        GDAL_LIB: /modeling/spack/opt/spack/linux-rocky8-haswell/gcc-8.5.0/gdal-3.8.5-ovb27rzosy4gicjgna36sf64rryc5mhn/lib64
+        GDAL_BIN: /modeling/spack/opt/spack/linux-rocky8-haswell/gcc-8.5.0/gdal-3.8.5-ovb27rzosy4gicjgna36sf64rryc5mhn/bin
+        GDAL_ROOT: /modeling/spack/opt/spack/linux-rocky8-haswell/gcc-8.5.0/gdal-3.8.5-ovb27rzosy4gicjgna36sf64rryc5mhn
+  geos:
+    paths:
+      geos@3.12.1: /modeling/spack/opt/spack/linux-rocky8-haswell/gcc-8.5.0/geos-3.12.1-scckvgvkgalfcivyoza7mnb5j4flsvkg
+    build_env:
+      append:
+        LD_LIBRARY_PATH: "/modeling/spack/opt/spack/linux-rocky8-haswell/gcc-8.5.0/gdal-3.8.5-ovb27rzosy4gicjgna36sf64rryc5mhn/lib64:/modeling/spack/opt/spack/linux-rocky8-haswell/gcc-8.5.0/proj-6.3.2-rh7bjpql5dq4sr2z7gqlx3hhnnxtnsw3/lib64:/modeling/spack/opt/spack/linux-rocky8-haswell/gcc-8.5.0/sqlite-3.43.2-pfuqkkv2x4tjoiuq6c43nsxrtaqxidrh/lib"
